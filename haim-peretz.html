@@ -21,7 +21,7 @@
         }
         .hero-bg-mindreader {
             background-image: url('https://www.karamel.co.il/images/karamel.co.il/images/main/2513/%D7%97%D7%99%D7%99%D7%9D_%D7%A4%D7%A8%D7%A5_%D7%90%D7%9E%D7%9F_%D7%97%D7%95%D7%A9%D7%99%D7%9D_%D7%9C%D7%A6%D7%A2%D7%99%D7%A8%D7%99%D7%9D-2025-05-25-15-57-8033_c.webp');
-            background-size: contain; /* שמור על contain */
+            background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
             background-color: black;
@@ -47,16 +47,13 @@
 <main>
     <section
         id="home-mindreader"
-        class="hero-bg-mindreader text-white h-screen flex items-center justify-center text-center relative"
+        class="hero-bg-mindreader h-screen flex items-center justify-center text-center relative px-4"
     >
-        <!-- שכבת כהה עם שקיפות משתנה למכשירים שונים -->
-        <div class="absolute inset-0 bg-black md:opacity-60 opacity-30"></div>
-
-        <div class="relative z-10 p-6">
-            <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+        <div class="relative z-10 p-4 max-w-xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-extrabold leading-snug mb-4 text-black">
                 המופע שיאתגר לכם את המחשבה
             </h2>
-            <p class="text-lg md:text-2xl mb-8 text-gray-300">
+            <p class="text-base md:text-lg mb-8 text-black">
                 אמן חושים בינלאומי שידהים כל אירוע חברה
             </p>
             <a
@@ -248,3 +245,5 @@
 
 </body>
 </html>
+
+
