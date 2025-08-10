@@ -16,7 +16,7 @@
         html { scroll-behavior: smooth; }
         .hero-bg-mindreader {
             background-image: url('https://www.karamel.co.il/images/karamel.co.il/images/main/2513/%D7%97%D7%99%D7%99%D7%9D_%D7%A4%D7%A8%D7%A5_%D7%90%D7%9E%D7%9F_%D7%97%D7%95%D7%A9%D7%99%D7%9D_%D7%9C%D7%A6%D7%A2%D7%99%D7%A8%D7%99%D7%9D-2025-05-25-15-57-8033_c.webp');
-            background-size: cover;
+            background-size: contain; /* שינוי הגודל כאן ל-contain */
             background-repeat: no-repeat;
             background-position: center;
             background-color: black;
@@ -26,7 +26,7 @@
         /* שיפורים למובייל */
         @media (max-width: 768px) {
             .hero-bg-mindreader {
-                background-size: cover;
+                background-size: contain; /* שינוי הגודל כאן גם למובייל */
                 background-position: center top;
                 min-height: 100vh;
             }
