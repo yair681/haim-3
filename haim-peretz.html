@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>חיים פרץ - אמן חושים</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
         body {
             font-family: 'Assistant', sans-serif;
             background-color: #1a202c;
         }
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
         .hero-bg-mindreader {
             background-image: url('https://www.karamel.co.il/images/karamel.co.il/images/main/2513/%D7%97%D7%99%D7%99%D7%9D_%D7%A4%D7%A8%D7%A5_%D7%90%D7%9E%D7%9F_%D7%97%D7%95%D7%A9%D7%99%D7%9D_%D7%9C%D7%A6%D7%A2%D7%99%D7%A8%D7%99%D7%9D-2025-05-25-15-57-8033_c.webp');
-            background-size: contain; /* שינוי הגודל כאן ל-contain */
+            background-size: contain; /* שמור על contain */
             background-repeat: no-repeat;
             background-position: center;
             background-color: black;
             min-height: 100vh;
         }
-        
-        /* שיפורים למובייל */
+
         @media (max-width: 768px) {
             .hero-bg-mindreader {
-                background-size: contain; /* שינוי הגודל כאן גם למובייל */
+                background-size: contain;
                 background-position: center top;
-                min-height: 100vh;
             }
         }
     </style>
@@ -42,12 +45,25 @@
 </header>
 
 <main>
-    <section id="home-mindreader" class="hero-bg-mindreader text-white h-screen flex items-center justify-center text-center relative">
-        <div class="absolute inset-0 bg-black opacity-60"></div>
+    <section
+        id="home-mindreader"
+        class="hero-bg-mindreader text-white h-screen flex items-center justify-center text-center relative"
+    >
+        <!-- שכבת כהה עם שקיפות משתנה למכשירים שונים -->
+        <div class="absolute inset-0 bg-black md:opacity-60 opacity-30"></div>
+
         <div class="relative z-10 p-6">
-            <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">המופע שיאתגר לכם את המחשבה</h2>
-            <p class="text-lg md:text-2xl mb-8 text-gray-300">אמן חושים בינלאומי שידהים כל אירוע חברה</p>
-            <a href="#contact-mindreader" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full text-lg">לתיאום מופע</a>
+            <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
+                המופע שיאתגר לכם את המחשבה
+            </h2>
+            <p class="text-lg md:text-2xl mb-8 text-gray-300">
+                אמן חושים בינלאומי שידהים כל אירוע חברה
+            </p>
+            <a
+                href="#contact-mindreader"
+                class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full text-lg"
+                >לתיאום מופע</a
+            >
         </div>
     </section>
 
@@ -55,7 +71,9 @@
         <div class="w-full px-6 text-center">
             <h3 class="text-3xl md:text-4xl font-bold mb-6 text-cyan-400">אודות חיים פרץ</h3>
             <p class="max-w-2xl mx-auto text-lg text-gray-300 leading-relaxed">
-                שמי חיים פרץ, אמן חושים מקצועי בעל ניסיון רב בהופעות מול קהלים עסקיים ופרטיים. אני מתמחה בטלפתיה, קריאת מחשבות, ומניפולציות פסיכולוגיות שישאירו את הקהל שלכם מופתע ומרותק.
+                שמי חיים פרץ, אמן חושים מקצועי בעל ניסיון רב בהופעות מול קהלים
+                עסקיים ופרטיים. אני מתמחה בטלפתיה, קריאת מחשבות, ומניפולציות
+                פסיכולוגיות שישאירו את הקהל שלכם מופתע ומרותק.
             </p>
         </div>
     </section>
@@ -64,16 +82,31 @@
         <div class="container mx-auto px-6 text-center">
             <h3 class="text-3xl md:text-4xl font-bold mb-12 text-cyan-400">המלצות</h3>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700">
-                    <p class="text-gray-300 italic mb-4">"מופע עוצר נשימה! חיים הצליח לדהים את כל העובדים במשרד. נשארנו המומים!"</p>
+                <div
+                    class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700"
+                >
+                    <p class="text-gray-300 italic mb-4">
+                        "מופע עוצר נשימה! חיים הצליח לדהים את כל העובדים במשרד.
+                        נשארנו המומים!"
+                    </p>
                     <p class="font-semibold text-cyan-500">- מנהל אירועים, חברת הייטק</p>
                 </div>
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700">
-                    <p class="text-gray-300 italic mb-4">"הוא לא רק אמן חושים, הוא אמן אמיתי של אנשים. המופע היה מצחיק, מרתק ואינטליגנטי."</p>
+                <div
+                    class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700"
+                >
+                    <p class="text-gray-300 italic mb-4">
+                        "הוא לא רק אמן חושים, הוא אמן אמיתי של אנשים. המופע היה
+                        מצחיק, מרתק ואינטליגנטי."
+                    </p>
                     <p class="font-semibold text-cyan-500">- שירה לוי, יום הולדת 40</p>
                 </div>
-                <div class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700">
-                    <p class="text-gray-300 italic mb-4">"החוויה הייתה בלתי נשכחת. חיים יצר קסם אמיתי וגרם לכולם להשתתף וליהנות."</p>
+                <div
+                    class="bg-gray-800 p-6 rounded-lg shadow-xl border border-gray-700"
+                >
+                    <p class="text-gray-300 italic mb-4">
+                        "החוויה הייתה בלתי נשכחת. חיים יצר קסם אמיתי וגרם לכולם
+                        להשתתף וליהנות."
+                    </p>
                     <p class="font-semibold text-cyan-500">- ארגון נוער</p>
                 </div>
             </div>
@@ -82,30 +115,57 @@
 
     <section id="gallery" class="py-20 bg-gray-900">
         <div class="w-full px-6">
-            <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-cyan-400">גלריה</h3>
-            <div id="gallery-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+            <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-cyan-400">
+                גלריה
+            </h3>
+            <div
+                id="gallery-container"
+                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"
+            ></div>
         </div>
     </section>
-    
+
     <section id="articles-mindreader" class="py-20 bg-gray-800">
         <div class="container mx-auto px-6">
-            <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-cyan-400">כתבות עליי</h3>
+            <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-cyan-400">
+                כתבות עליי
+            </h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-700">
-                    <h4 class="text-xl font-bold mb-2 text-cyan-500">הקסם שמלמד את הילדים על ט' באב</h4>
+                <div
+                    class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-700"
+                >
+                    <h4 class="text-xl font-bold mb-2 text-cyan-500">
+                        הקסם שמלמד את הילדים על ט' באב
+                    </h4>
                     <p class="text-gray-400 mb-4">פורסם באתר 'הידברות'</p>
                     <p class="text-gray-300 italic mb-4">
-                        "חיים פרץ בריאיון מיוחד במסגרת התוכנית 'בוקר אמוני', על איך להנגיש את היהדות לילדים באמצעות קסמים ותוכן חוויתי."
+                        "חיים פרץ בריאיון מיוחד במסגרת התוכנית 'בוקר אמוני', על
+                        איך להנגיש את היהדות לילדים באמצעות קסמים ותוכן חוויתי."
                     </p>
-                    <a href="https://www.hidabroot.org/video/226073" target="_blank" class="text-cyan-400 hover:text-cyan-300 font-semibold">צפו בכתבה »</a>
+                    <a
+                        href="https://www.hidabroot.org/video/226073"
+                        target="_blank"
+                        class="text-cyan-400 hover:text-cyan-300 font-semibold"
+                        >צפו בכתבה »</a
+                    >
                 </div>
-                <div class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-700">
-                    <h4 class="text-xl font-bold mb-2 text-cyan-500">טקס אנשי השנה של עמותת רח"ל</h4>
+                <div
+                    class="bg-gray-900 p-6 rounded-lg shadow-xl border border-gray-700"
+                >
+                    <h4 class="text-xl font-bold mb-2 text-cyan-500">
+                        טקס אנשי השנה של עמותת רח"ל
+                    </h4>
                     <p class="text-gray-400 mb-4">פורסם באתר 'בלינקר'</p>
                     <p class="text-gray-300 italic mb-4">
-                        "כתבה מרגשת על טקס "אנשי השנה" של עמותת רח"ל, אירוע הוקרה מיוחד לאנשים שפועלים למען הקהילה."
+                        "כתבה מרגשת על טקס "אנשי השנה" של עמותת רח"ל, אירוע הוקרה
+                        מיוחד לאנשים שפועלים למען הקהילה."
                     </p>
-                    <a href="https://blinker.co.il/קריות/פנאי-קריות/טקס-אנשי-השנה-של-עמותת-ר-ח-ל-ערב-מרגש/461360/" target="_blank" class="text-cyan-400 hover:text-cyan-300 font-semibold">קראו עוד »</a>
+                    <a
+                        href="https://blinker.co.il/קריות/פנאי-קריות/טקס-אנשי-השנה-של-עמותת-ר-ח-ל-ערב-מרגש/461360/"
+                        target="_blank"
+                        class="text-cyan-400 hover:text-cyan-300 font-semibold"
+                        >קראו עוד »</a
+                    >
                 </div>
             </div>
         </div>
@@ -113,73 +173,78 @@
 
     <section id="contact-mindreader" class="py-20 bg-gray-800 text-center">
         <h3 class="text-3xl md:text-4xl font-bold mb-6 text-cyan-400">ליצירת קשר</h3>
-        <a href="tel:0544347168" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-12 rounded-full">התקשרו עכשיו: 054-4347168</a>
+        <a
+            href="tel:0544347168"
+            class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-12 rounded-full"
+            >התקשרו עכשיו: 054-4347168</a
+        >
     </section>
 </main>
 
 <script>
-// כאן תרשום את שמות הקבצים שנמצאים באותה תיקייה עם הקובץ
-const items = [
-    "pic1.jpg",
-    "pic2.jpg",
-    "pic3.jpg",
-    "pic4.jpg",
-    "pic5.jpg",
-    "video6.mp4"
-];
+    // כאן תרשום את שמות הקבצים שנמצאים באותה תיקייה עם הקובץ
+    const items = [
+        "pic1.jpg",
+        "pic2.jpg",
+        "pic3.jpg",
+        "pic4.jpg",
+        "pic5.jpg",
+        "video6.mp4"
+    ];
 
-const gallery = document.getElementById('gallery-container');
+    const gallery = document.getElementById("gallery-container");
 
-// יצירת הגלריה
-items.forEach(src => {
-    const galleryItem = document.createElement('div');
-    galleryItem.className = "rounded-lg shadow-lg hover:scale-105 transition-transform duration-300";
-    
-    if (src.endsWith('.mp4')) {
-        const videoWrapper = document.createElement('div');
-        videoWrapper.className = "relative rounded-lg overflow-hidden";
-        
-        const video = document.createElement('video');
-        video.src = src;
-        video.className = "w-full h-full object-contain rounded-lg";
-        videoWrapper.appendChild(video);
+    // יצירת הגלריה
+    items.forEach((src) => {
+        const galleryItem = document.createElement("div");
+        galleryItem.className =
+            "rounded-lg shadow-lg hover:scale-105 transition-transform duration-300";
 
-        const playButton = document.createElement('button');
-        playButton.className = "absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-4xl cursor-pointer opacity-100 transition-opacity duration-300";
-        playButton.innerHTML = "▶️";
-        videoWrapper.appendChild(playButton);
+        if (src.endsWith(".mp4")) {
+            const videoWrapper = document.createElement("div");
+            videoWrapper.className = "relative rounded-lg overflow-hidden";
 
-        playButton.onclick = (e) => {
-            e.stopPropagation();
-            if (video.paused) {
-                video.play();
-                playButton.innerHTML = "⏸️";
-                playButton.classList.add('opacity-0');
-            } else {
-                video.pause();
-                playButton.innerHTML = "▶️";
-                playButton.classList.remove('opacity-0');
-            }
-        };
+            const video = document.createElement("video");
+            video.src = src;
+            video.className = "w-full h-full object-contain rounded-lg";
+            videoWrapper.appendChild(video);
 
-        video.addEventListener('ended', () => {
+            const playButton = document.createElement("button");
+            playButton.className =
+                "absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-4xl cursor-pointer opacity-100 transition-opacity duration-300";
             playButton.innerHTML = "▶️";
-            playButton.classList.remove('opacity-0');
-        });
+            videoWrapper.appendChild(playButton);
 
-        galleryItem.appendChild(videoWrapper);
-    } else {
-        const img = document.createElement('img');
-        img.src = src;
-        img.alt = "גלריה";
-        img.className = "rounded-lg"; 
-        galleryItem.appendChild(img);
-    }
+            playButton.onclick = (e) => {
+                e.stopPropagation();
+                if (video.paused) {
+                    video.play();
+                    playButton.innerHTML = "⏸️";
+                    playButton.classList.add("opacity-0");
+                } else {
+                    video.pause();
+                    playButton.innerHTML = "▶️";
+                    playButton.classList.remove("opacity-0");
+                }
+            };
 
-    gallery.appendChild(galleryItem);
-});
+            video.addEventListener("ended", () => {
+                playButton.innerHTML = "▶️";
+                playButton.classList.remove("opacity-0");
+            });
+
+            galleryItem.appendChild(videoWrapper);
+        } else {
+            const img = document.createElement("img");
+            img.src = src;
+            img.alt = "גלריה";
+            img.className = "rounded-lg";
+            galleryItem.appendChild(img);
+        }
+
+        gallery.appendChild(galleryItem);
+    });
 </script>
 
 </body>
 </html>
-
