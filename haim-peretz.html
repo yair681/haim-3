@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>חיים פרץ - אמן חושים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Assistant', sans-serif;
+            background-color: #1a202c;
+        }
+        html { scroll-behavior: smooth; }
+        .hero-bg-mindreader {
+            background-image: url('https://www.karamel.co.il/images/karamel.co.il/images/main/2513/%D7%97%D7%99%D7%99%D7%9D_%D7%A4%D7%A8%D7%A5_%D7%90%D7%9E%D7%9F_%D7%97%D7%95%D7%A9%D7%99%D7%9D_%D7%9C%D7%A6%D7%A2%D7%99%D7%A8%D7%99%D7%9D-2025-05-25-15-57-8033_c.webp');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: black;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+<header class="bg-gray-900 bg-opacity-80 backdrop-blur-sm sticky top-0 z-50 shadow-lg">
+    <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-center items-center">
+        <h1 class="text-2xl md:text-3xl font-bold text-cyan-400">חיים פרץ</h1>
+    </div>
+</header>
+
+<main>
+    <section id="home-mindreader" class="hero-bg-mindreader text-white h-[80vh] flex items-center justify-center text-center relative">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="relative z-10 p-6">
+            <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">המופע שיאתגר את המחשבה</h2>
+            <p class="text-lg md:text-2xl mb-8 text-gray-300">אמן חושים בינלאומי שידהים כל אירוע חברה</p>
+            <a href="#contact-mindreader" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-8 rounded-full text-lg">לתיאום מופע</a>
+        </div>
+    </section>
+
+    <section id="about-mindreader" class="py-20 bg-gray-800">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-3xl md:text-4xl font-bold mb-6 text-cyan-400">אודות חיים פרץ</h3>
+            <p class="max-w-2xl mx-auto text-lg text-gray-300 leading-relaxed">
+                שמי חיים פרץ, אמן חושים מקצועי בעל ניסיון רב בהופעות מול קהלים עסקיים ופרטיים. אני מתמחה בטלפתיה, קריאת מחשבות, ומניפולציות פסיכולוגיות שישאירו את הקהל שלכם מופתע ומרותק.
+            </p>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl md:text-4xl font-bold text-center mb-12 text-cyan-400">גלריה</h3>
+            <div id="gallery-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+        </div>
+    </section>
+
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-90 hidden justify-center items-center z-50">
+        <span class="absolute top-6 right-10 text-white text-4xl cursor-pointer" onclick="closeModal()">&times;</span>
+        <div id="modal-content-wrapper" class="max-w-[90%] max-h-[90%] rounded-lg shadow-2xl"></div>
+    </div>
+
+    <section id="contact-mindreader" class="py-20 bg-gray-800 text-center">
+        <h3 class="text-3xl md:text-4xl font-bold mb-6 text-cyan-400">ליצירת קשר</h3>
+        <a href="tel:0544347168" class="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-3 px-12 rounded-full">התקשרו עכשיו: 054-4347168</a>
+    </section>
+</main>
+
+<script>
+// כאן תרשום את שמות הקבצים שנמצאים באותה תיקייה עם הקובץ
+const items = [
+    "pic1.jpg",
+    "pic2.jpg",
+    "pic3.jpg",
+    "pic4.jpg",
+    "pic5.jpg",
+    "video6.mp4"
+];
+
+const gallery = document.getElementById('gallery-container');
+const modalWrapper = document.getElementById('modal-content-wrapper');
+
+// יצירת הגלריה
+items.forEach(src => {
+    const galleryItem = document.createElement('div');
+    galleryItem.className = "rounded-lg shadow-lg cursor-pointer hover:scale-105 transition-transform duration-300";
+    
+    if (src.endsWith('.mp4')) {
+        const video = document.createElement('video');
+        video.src = src;
+        video.controls = true;
+        video.className = "w-full h-full object-cover rounded-lg";
+        galleryItem.appendChild(video);
+    } else {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = "גלריה";
+        img.className = "w-full h-full object-cover rounded-lg";
+        galleryItem.appendChild(img);
+    }
+
+    galleryItem.onclick = () => openModal(src);
+    gallery.appendChild(galleryItem);
+});
+
+// פתיחת חלון ההגדלה
+function openModal(src) {
+    modalWrapper.innerHTML = '';
+    
+    if (src.endsWith('.mp4')) {
+        const video = document.createElement('video');
+        video.src = src;
+        video.controls = true;
+        video.autoplay = true;
+        video.className = "max-w-full max-h-full rounded-lg";
+        modalWrapper.appendChild(video);
+    } else {
+        const img = document.createElement('img');
+        img.src = src;
+        img.className = "max-w-full max-h-full rounded-lg";
+        modalWrapper.appendChild(img);
+    }
+
+    document.getElementById('imageModal').classList.remove('hidden');
+    document.getElementById('imageModal').classList.add('flex');
+}
+
+// סגירת חלון ההגדלה
+function closeModal() {
+    document.getElementById('imageModal').classList.add('hidden');
+    document.getElementById('imageModal').classList.remove('flex');
+    modalWrapper.innerHTML = '';
+}
+</script>
+
+</body>
+</html>
